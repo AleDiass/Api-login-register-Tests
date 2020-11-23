@@ -8,7 +8,8 @@
     - sqlite3
 
 - #####  How to Use:
-- Forks or Clone this Repository and Open the Server with node  
+- Forks or Clone this Repository and Open the Server with node
+- Install Project Dependencies with Yarn install or npm install
 - Open your Insomnia or Postman and send Request In Json Like the Exemples :
    - ###### Login : Route "http://localhost:3000/login" 
             Method:Post
@@ -23,7 +24,7 @@
                 "pass":"123",
                 "passverify":"123",
                 }
-    - ###### Jwt in Header : You need send a 'Authorization key with Jwt token In Value' Route : "http://localhost:3000/CheckAuth" 
+    - ###### Jwt in Request Header : You need send a 'Authorization key with Jwt token In Value' Route : "http://localhost:3000/CheckAuth" 
              Method:Get
 
 

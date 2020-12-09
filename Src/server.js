@@ -11,24 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const AuthMiddleware = ((req,res,next)=>{
-    const {authorization} = req.headers;
-   
 
-    if(authorization){
-       
-        
-        const {data} = jw.verifyToken(authorization);
-     
-       
-        data ? req.body.verfication = {Auth:true,id:data} : req.body.verfication = {Auth:false}
-        
-    }else{
-        req.body.verfication = {Auth:false};
-    }  
-    
-    next();
-})
 
 app.get('/checkAuth',AuthMiddleware, async (req,res)=>{
 
